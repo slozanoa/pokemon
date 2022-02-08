@@ -5,6 +5,7 @@
    :height="height"
    :types="types"
    :imgPhoto="imgPhoto"
+   :favorite="favorite"
    ></Modal>
   <List v-for="pokemon in pokemons" :key="pokemon.name"
    :namePokemon="firstCapital(pokemon.name)"
@@ -33,7 +34,8 @@ export default {
           weight: '',
           height: '',
           types: '',
-          imgPhoto:''
+          imgPhoto:'',
+          favorite: true
         }
     },
     emits: ["namePokemon"],
@@ -60,6 +62,7 @@ export default {
           this.types = types.substring(0, types.length - 2)
           //  this.pokemons = response.data.results
         })
+        this.favorite = this.pokemons.find((pokemon) => pokemon.name.toLowerCase() === name.toLowerCase()).favorite
       },
       favorites: function(namePokemon){
         console.log('namePokemon lists', namePokemon)

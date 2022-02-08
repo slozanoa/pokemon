@@ -44,7 +44,7 @@ export default {
         if (isPokemon) {
           return {
             ...pokemon,
-            favorite: true,
+            favorite: !pokemon.favorite,
           };
         } else {
           return pokemon;
