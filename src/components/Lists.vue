@@ -8,7 +8,9 @@
    ></Modal>
   <List v-for="pokemon in pokemons" :key="pokemon.name"
    :namePokemon="firstCapital(pokemon.name)"
+   :active="pokemon.favorite"
    @pokemon="getPokemonByName($event)"
+   @favorites="favorites($event)"
   ></List>
 </template>
 
@@ -34,6 +36,7 @@ export default {
           imgPhoto:''
         }
     },
+    emits: ["namePokemon"],
     methods:{
       setModal(modal){
         this.modalActive = modal;
@@ -46,7 +49,6 @@ export default {
       getPokemonByName(name){
        this.setModal(true)
           axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then(response=>{
-          console.log('solo one',response.data)
           this.name = this.firstCapital(response.data.name)
           this.weight = response.data.weight
           this.height = response.data.height
@@ -58,6 +60,10 @@ export default {
           this.types = types.substring(0, types.length - 2)
           //  this.pokemons = response.data.results
         })
+      },
+      favorites: function(namePokemon){
+        console.log('namePokemon lists', namePokemon)
+        this.$emit("namePokemon", namePokemon);
       }
     }
 

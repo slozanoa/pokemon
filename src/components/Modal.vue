@@ -2,7 +2,9 @@
   <section class="modal modal--show">
     <div class="modal_container">
     <div class="modal_img">
+      <a href="#"  @click="closeModal" class="modal_close">X</a>
         <img v-bind:src="imgPhoto" alt="" class="modal_pokemon" />
+        
     </div>
       <div class="modal_texts">
         <p class="modal_paragraph">Name: {{name}}</p>
@@ -12,7 +14,7 @@
         <p class="modal_paragraph">Height: {{height}}</p>
         <hr />
         <p class="modal_paragraph">Types: {{types}}</p>
-        <a href="#" class="modal_close" @click="closeModal">Cerrar</a>
+        
       </div>
     </div>
   </section>
@@ -29,7 +31,7 @@ export default {
   ],
   data() {
             return {
-                image: {backgroundImage:  `url(${require('./cover.png')})`}
+              
             };
         },
   methods: {
@@ -67,10 +69,10 @@ export default {
 }
 .modal_container {
   margin: auto;
-  width: 60%;
+  width: 40%;
   max-height: 90%;
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 10px;
   grid-auto-columns: 100%;
   transform: var(--transform);
   transition: var(--transition);
@@ -88,27 +90,36 @@ export default {
     padding: 1rem 0;
 }
 .modal_img {
-    background-image: url('./cover.png');
+    background-image: url('../assets/cover.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
 }
 .modal_pokemon{
     width: 100%;
     height: 100px;
+    
 }
 .modal_close {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
-  background-color: #f26250;
-  padding: 1em 3em;
-  border: 1px border;
-  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  background-color: #f5f5f5;
+  padding: .5rem;
+  border-radius: 50%;
   font-weight: 300;
   transition: background-color 0.3s;
+  float: right;
+  margin: 5px 5px 0 0;
 }
 .modal_close:hover {
   color: #f26250;
   background-color: #fff;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal_container {
+    width: 90%;
+  }
 }
 </style>
