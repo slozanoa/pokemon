@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Main></Main>
+    <Started></Started>
   </div>
 </template>
 
 <script>
-import Main from './Main.vue';
+import Started from './components/Started.vue';
 export default {
   name: 'App',
   components:{
-    Main
+    Started
   },
 }
 </script>
@@ -17,7 +17,7 @@ export default {
 <style>
 body{
   background-color: #f9f9f9;
-  font-family: 'Poppins', sans-serif;
+  font-family: Lato, sans-serif;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
