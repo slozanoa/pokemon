@@ -1,6 +1,6 @@
 <template>
   <div class="pok-card" @click="geyByIdPokemon(namePokemon)">
-    <h2>{{ namePokemon }}</h2>
+    <span class="namePokemon">{{ namePokemon }}</span>
     <span class="pokemon-favorite" @click="favorites(namePokemon)">
       <svg
         v-if="active"
@@ -31,7 +31,6 @@
 </template>
 
 <script>
-// import axios from 'axios'
 export default {
   props: ["namePokemon","active"],
    emits: ["pokemon"],
@@ -74,5 +73,8 @@ export default {
 .pokemon-activa {
   color: #eca539;
 }
-
+.pok-card{
+  font-size: 22px;
+  font-weight: 500;
+}
 </style>
