@@ -162,7 +162,7 @@ body {
 .searh {
   height: 50px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   display: block;
   box-sizing: border-box;
   border: none;
