@@ -53,7 +53,6 @@ export default {
 .pok-card {
   background-color: #ffffff;
   padding: 5px;
-  width: 50%;
   margin: 0 auto;
   margin-bottom: 10px;
   cursor: pointer;
@@ -75,9 +74,5 @@ export default {
 .pokemon-activa {
   color: #eca539;
 }
-@media only screen and (max-width: 700px) {
-  .pok-card {
-    width: 90%;
-  }
-}
+
 </style>

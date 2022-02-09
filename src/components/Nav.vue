@@ -43,7 +43,7 @@ nav {
 }
 .nav-group-button {
   display: grid;
-  max-width: 570px;
+  width: 45%;
   margin: auto;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -55,8 +55,8 @@ nav {
   border-radius: 60px;
   cursor: pointer;
   padding: 11px 20px;
-      font-weight: 700;
-    font-size: 18px;
+  font-weight: 700;
+  font-size: 18px;
   gap:5px
 }
 .nav-all {
@@ -72,5 +72,9 @@ nav {
   color: #ffffff;
 }
 @media only screen and (max-width: 700px) {
+  .nav-group-button {
+  width: 90%;
+
+}
 }
 </style>

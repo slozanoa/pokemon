@@ -2,7 +2,7 @@
   <section class="modal modal--show">
     <div class="modal_container">
       <div class="modal_img">
-        <a href="#" @click="closeModal" class="modal_close"
+        <a href="" @click="closeModal($event)" class="modal_close"
           ><img src="../assets/close.svg" alt="" srcset=""
         /></a>
         <img v-bind:src="imgPhoto" alt="" class="modal_pokemon" />
@@ -63,7 +63,8 @@ export default {
     };
   },
   methods: {
-    closeModal: function () {
+    closeModal(e) {
+       e.preventDefault()
       this.$emit("closeModal", false);
     },
     copiarAlPortapapeles: function (id_elemento) {
@@ -79,8 +80,7 @@ export default {
       }, 2000);
     },
     favorites (namePokemon) {
-      console.log('list', namePokemon);
-      // this.$emit("favorites", namePokemon);
+      this.$emit("favorites", namePokemon);
     },
   },
 };
@@ -135,6 +135,7 @@ export default {
   width: 90%;
   margin: 0 auto;
   padding: 1rem 0;
+  text-align: start;
 }
 .modal_img {
   background-image: url("../assets/cover.png");
