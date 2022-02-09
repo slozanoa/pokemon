@@ -10,7 +10,7 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'About',
+    name: 'dashboard',
     component: Main
   }
 ]
