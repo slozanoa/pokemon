@@ -11,7 +11,7 @@
     :favorite="favorite"
     @favorites="favorites($event)"
   ></Modal>
-  <div v-if="!loading">
+  <div v-if="!loading" class="list-pokemon">
     <List
       v-for="pokemon in pokemons"
       :key="pokemon.name"
@@ -90,4 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.list-pokemon{
+  margin-bottom: 120px;
+}
 </style>

@@ -39,7 +39,6 @@ export default {
       this.$emit("pokemon", name.toLowerCase());
     },
     favorites (namePokemon) {
-      console.log('list', namePokemon);
       this.$emit("favorites", namePokemon);
     },
   },
@@ -51,7 +50,7 @@ export default {
 <style scoped>
 .pok-card {
   background-color: #ffffff;
-  padding: 5px;
+  padding: 8px 20px;
   margin: 0 auto;
   margin-bottom: 10px;
   cursor: pointer;

@@ -31,7 +31,7 @@
       </div>
     </div>
     <Nav
-    v-if="!loading"
+      v-if="!loading"
       @pokemons="getAllPokemonts"
       @pokemonsFavorities="getPokemonfavorite"
     ></Nav>
@@ -87,7 +87,7 @@ export default {
           });
           this.copyPokemons = this.pokemons;
           this.loading = false;
-          this.searchPokemons= true
+          this.searchPokemons = true;
         })
         .catch(function (error) {
           console.log(error);
@@ -95,7 +95,7 @@ export default {
         });
     },
     favorites(namePokemon) {
-      this.pokemons  = this.pokemons.map((pokemon) => {
+      this.pokemons = this.pokemons.map((pokemon) => {
         const isPokemon =
           pokemon.name.toLowerCase() === namePokemon.toLowerCase();
         if (isPokemon) {
@@ -108,7 +108,7 @@ export default {
         }
       });
       // this.pokemons = copyPokemon;
-      this.copyPokemons =  this.pokemons ;
+      this.copyPokemons = this.pokemons;
     },
     getPokemonfavorite() {
       if (this.copyPokemons.length === 0) {
@@ -149,31 +149,32 @@ body {
   margin-top: 60px;
 }
 .lists-pokemon {
-  overflow: auto;
   width: 50%;
   margin: 0 auto;
-  height: 75%;
 }
 .input-searh {
-  width: 100%;
-  display: flex;
-  align-content: center;
+  background: #fff;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 4%);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .searh {
-  height: 50px;
+  height: 100%;
   width: 100%;
-  margin-bottom: 30px;
   display: block;
   box-sizing: border-box;
   border: none;
-  outline: none;
+  outline: 0;
   font-weight: 500;
   font-size: 16px;
   color: #353535;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 .svg-searh {
-  margin-top: 16px;
+  padding: 16px 15px;
 }
 @media only screen and (max-width: 600px) {
   .lists-pokemon {
