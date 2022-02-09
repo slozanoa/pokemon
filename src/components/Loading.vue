@@ -80,10 +80,16 @@ export default {};
   z-index: 3;
 }
 .loading svg{
-   position: absolute;
-width: 106px;
-height: 106px;
-left: 523px;
-top: 297px;
+  position: fixed;
+  width: 106px;
+  height: 106px;
+  left: 45%;
+  top: 297px;
+}
+@media only screen and (max-width: 700px) {
+  .loading svg{
+  left: 40%;
+
+}
 }
 </style>
