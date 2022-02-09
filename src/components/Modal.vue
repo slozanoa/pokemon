@@ -25,7 +25,7 @@
         </button>
         <span class="pokemon-favorite" @click="favorites(name)">
           <svg
-            v-if="favorite"
+            v-if="isFavorities"
             width="26"
             height="26"
             viewBox="0 0 26 26"
@@ -37,7 +37,7 @@
             />
           </svg>
           <svg
-            v-if="!favorite"
+            v-if="!isFavorities"
             width="26"
             height="26"
             viewBox="0 0 26 26"
@@ -60,6 +60,7 @@ export default {
   data() {
     return {
       copited: false,
+      isFavorities: this.favorite
     };
   },
   methods: {
@@ -80,6 +81,7 @@ export default {
       }, 2000);
     },
     favorites (namePokemon) {
+      this.isFavorities = !this.isFavorities
       this.$emit("favorites", namePokemon);
     },
   },

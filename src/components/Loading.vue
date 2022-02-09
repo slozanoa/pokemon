@@ -62,7 +62,6 @@
     />
   </svg>
 </div>
-  
 </template>
 
 <script>

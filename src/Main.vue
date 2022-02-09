@@ -95,7 +95,7 @@ export default {
         });
     },
     favorites(namePokemon) {
-      const copyPokemon = this.pokemons.map((pokemon) => {
+      this.pokemons  = this.pokemons.map((pokemon) => {
         const isPokemon =
           pokemon.name.toLowerCase() === namePokemon.toLowerCase();
         if (isPokemon) {
@@ -107,8 +107,8 @@ export default {
           return pokemon;
         }
       });
-      this.pokemons = copyPokemon;
-      this.copyPokemons = copyPokemon;
+      // this.pokemons = copyPokemon;
+      this.copyPokemons =  this.pokemons ;
     },
     getPokemonfavorite() {
       if (this.copyPokemons.length === 0) {
