@@ -86,7 +86,7 @@ export default {
             };
           });
           this.copyPokemons = this.pokemons;
-          this.loading = true;
+          this.loading = false;
           this.searchPokemons= true
         })
         .catch(function (error) {
