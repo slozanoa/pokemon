@@ -129,9 +129,9 @@ export default {
 .modal_paragraph {
   margin-bottom: 10px;
   margin-left: 10px;
-  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 700;
+  color: #5E5E5E;
 }
 .modal_texts {
   width: 90%;
@@ -161,7 +161,7 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 button {
   font-family: "Lato", sans-serif;

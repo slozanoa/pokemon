@@ -2,9 +2,9 @@
   <div class="h-screen">
     <Loading v-if="loading"></Loading>
     <div v-if="!loading" class="lists-pokemon">
-      <div class="input-searh">
+      <div class="input-search">
         <svg
-          class="svg-searh"
+          class="svg-search"
           width="18"
           height="18"
           viewBox="0 0 18 18"
@@ -16,7 +16,7 @@
             fill="#BFBFBF"
           />
         </svg>
-        <input type="text" placeholder="Searh" class="searh" v-model="search" />
+        <input type="text" placeholder="Search" class="search" v-model="search" />
       </div>
 
       <Lists
@@ -149,10 +149,10 @@ body {
   margin-top: 60px;
 }
 .lists-pokemon {
-  width: 50%;
+  max-width: 570px;
   margin: 0 auto;
 }
-.input-searh {
+.input-search {
   background: #fff;
   box-shadow: 0 2px 10px rgb(0 0 0 / 4%);
   border-radius: 5px;
@@ -161,7 +161,7 @@ body {
   align-items: center;
   margin-bottom: 40px;
 }
-.searh {
+.search {
   height: 100%;
   width: 100%;
   display: block;
@@ -173,7 +173,7 @@ body {
   color: #353535;
   font-family: Montserrat, sans-serif;
 }
-.svg-searh {
+.svg-search {
   padding: 16px 15px;
 }
 @media only screen and (max-width: 600px) {
