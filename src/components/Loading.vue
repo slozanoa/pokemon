@@ -76,7 +76,6 @@ export default {};
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111111bd;
   z-index: 3;
 }
 .loading svg{

@@ -1,22 +1,31 @@
 <template>
   <nav>
     <div class="nav-group-button">
-      <button class="btn nav-all" @click="getPokemon">
+      <button class="btn nav-all" @click="getPokemon" :class="{active: isActiveAll}">
         <i class="fas fa-bars"></i> All
       </button>
-      <button class="btn nav-favorite" @click="getPokemonfavorite"><i class="fas fa-star"></i>Favorities</button>
+      <button class="btn nav-favorite" @click="getPokemonfavorite" :class="{active: isActiveFavorites}"><i class="fas fa-star"></i>Favorites</button>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      isActiveAll:true,
+      isActiveFavorites:false
+    };
+  },
   methods: {
-    getPokemon: function () {
+    getPokemon () {
+      this.isActiveAll = true;
+      this.isActiveFavorites = false;
       this.$emit("pokemons");
     },
-    getPokemonfavorite: function () {
-      console.log('estoy en favorites')
+    getPokemonfavorite () {
+      this.isActiveAll = false;
+      this.isActiveFavorites = true;
       this.$emit("pokemonsFavorities");
 
     },
@@ -60,7 +69,7 @@ nav {
   gap:5px
 }
 .nav-all {
-  background-color: red;
+  background-color: #bfbfbf;
   border: none;
   width: 100%;
   color: #ffffff;
@@ -70,6 +79,10 @@ nav {
   background-color: #bfbfbf;
   border: none;
   color: #ffffff;
+}
+.active{
+  background-color:#F22539 ;
+
 }
 @media only screen and (max-width: 700px) {
   .nav-group-button {

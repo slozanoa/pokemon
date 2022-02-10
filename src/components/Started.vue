@@ -221,7 +221,7 @@
         </g>
       </svg>
 
-      <h1>Welcome to Pokédex</h1>
+      <h1 class="typography-h1">Welcome to Pokédex</h1>
       <p class="typography">
         The digital encyclopedia created by Professor Oak is an invaluable tool
         to Trainers in the Pokémon world.
@@ -257,11 +257,21 @@ export default {
   text-align: center;
 }
 .typography {
-  font-size: 18px;
+  font-family: Lato;
+  font-style: normal;
   font-weight: 500;
-  margin: 30px 0 50px 0;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+
+  text-align: center;
 }
-h1 {
-  margin-top: 40px;
+.typography-h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  align-items: center;
+  text-align: center;
 }
 </style>

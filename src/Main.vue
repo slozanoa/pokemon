@@ -31,7 +31,7 @@
       </div>
     </div>
     <Nav
-      v-if="!loading"
+      v-if="!loading  && searchPokemons"
       @pokemons="getAllPokemonts"
       @pokemonsFavorities="getPokemonfavorite"
     ></Nav>
@@ -60,7 +60,7 @@ export default {
     };
   },
   watch: {
-    search: function (value) {
+    search(value) {
       console.log("pokemon", value);
       console.log("a", this.pokemons);
       this.pokemons = this.copyPokemons.filter((pokemon) => {
