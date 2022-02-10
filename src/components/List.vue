@@ -75,5 +75,6 @@ export default {
 .pok-card{
   font-size: 22px;
   font-weight: 500;
+  border-radius: 5px;
 }
 </style>
